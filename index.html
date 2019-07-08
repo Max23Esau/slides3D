@@ -2,25 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="swiper.">
+    <link rel="stylesheet" href="swiper.min.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <title>Slides 3D</title>
 </head>
 <body>
-    <div class="card">
-        <div class="sliderText">
-            <h3>Slide One</h3>
-        </div>
-        <div class="content">
-            <p>
-                Cuando empecé a estudiar en Platzi nunca
-                me imaginé que mi educación iba a ser 
-                100% online.Platzi me ayudó a llegar 
-                a mi objetivo. 
-            </p>
-            <a href="#">Read More</a>
-        </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="card">
+                    <div class="sliderText">
+                        <h3>Slide One</h3>
+                    </div>
+                    <div class="content">
+                        <p>
+                        Cuando empecé a estudiar en Platzi nunca
+                        me imaginé que mi educación iba a ser 
+                        100% online.Platzi me ayudó a llegar 
+                        a mi objetivo. 
+                        </p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>               
     </div>
+    <script src="swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        });
+  </script>
 </body>
 </html>
